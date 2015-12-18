@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<!-- Our Website CSS Styles -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<main ng-app="twitchStatusApp">
+		<section ng-controller="ctrl">
+			<header>
+				<ul id='userMenu'>
+					<li data-display='allUsers' class='activeItem'>All</li>
+					<li data-display='onlineUsers'>Online</li>
+					<li data-display='offlineUsers'>Offline</li>
+				</ul>
+			</header>
+			<div id="search">
+				<i id="searchIcon" class="fa fa-search"></i>
+				<input type="text" ng-model="searchText" id="searchBar" />
+			</div>
+			<ul id="users">
+				<a href="http://twitch.tv/{{user.username}}" target="_blank" ng-repeat="user in profile | filter:searchText">
+					<li>
+						<img ng-src="{{user.logo}}" class="avatar" />
+						<span class="name">{{user.name}}</span>
+						<span class="status">
+							<i class="{{user.status}}"></i>
+						</span>
+						<span class="title">{{user.streamTitle}}</span>
+					</li>
+				</a>
+			</ul>
+		</section>
+		</main>
+		<!-- Our Website Javascripts -->
+		<script src="js/main.js"></script>
+	</body>
+</html>

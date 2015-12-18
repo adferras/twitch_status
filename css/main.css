@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+.activeItem:after,
+.activeItem:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.activeItem:after {
+  border-top-color: #4B8053;
+  border-width: 10px;
+  margin-left: -10px;
+  z-index: 10;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+body {
+  background-color: #CDFAD4;
+}
+
+.green {
+  color: green;
+}
+
+header {
+  position: relative;
+  height: 50px;
+  background-color: #4B8053;
+}
+
+header li {
+  position: relative;
+  list-style-type: none;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: .9em;
+  color: white;
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  padding-right: 25px;
+  border-right: 1px solid white;
+}
+
+header li:first-child {
+  padding-right: 35px;
+}
+
+header li:last-child {
+  border-right: none;
+}
+
+header li:hover {
+  cursor: pointer;
+}
+
+header ul {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+html {
+  font-family: 'Raleway', sans-serif;
+}
+
+main {
+  margin: 0 auto;
+  width: 300px;
+  border: 1px solid green;
+  background: white;
+}
+
+.name {
+  left: 80px;
+  color: green;
+}
+
+.name,
+.status {
+  position: absolute;
+  line-height: 50px;
+}
+
+.red {
+  color: red;
+}
+
+#search {
+  text-align: center;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+#searchBar {
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding-left: 30px;
+  line-height: 20px;
+  font-size: 1em;
+  outline: none;
+  position: relative;
+  width: 70%;
+  text-align: left;
+}
+
+#searchIcon {
+  position: absolute;
+  z-index: 1;
+  padding-top: 5px;
+  left: 40px;
+  color: gray;
+}
+
+.status {
+  right: 20px;
+}
+
+.title {
+  color: green;
+  font-size: .7em;
+}
+
+#users {
+  padding-left: 0;
+}
+
+#users a {
+  text-decoration: none;
+}
+
+#users li {
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  list-style-type: none;
+  display: block;
+  padding: 10px 0px 10px 20px;
+}
